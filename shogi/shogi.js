@@ -263,7 +263,7 @@ function redraw() {
     for (y = 0; y < bh; y++) {
         for (x = 0; x < bw; x++) {
             if (isinside(x, y, ofsx, ofsy, 9, 9)) {
-                c = 1;
+                c = 1;  // color
             } else {
                 c = 0;
             }
