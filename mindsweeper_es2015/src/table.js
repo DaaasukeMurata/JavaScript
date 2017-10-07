@@ -58,7 +58,7 @@ export default class {
     const max_j = Math.min(j + 1, this.rows - 1);
     let list = [];
     for (let jj = min_j; jj <= max_j; jj++) {
-      for (let ii = min_i; ii <= max_i; i++) {
+      for (let ii = min_i; ii <= max_i; ii++) {
         if (i != ii || j != jj) {   // clickされたマスを除く
           list.push({ i: ii, j: jj });
         }
@@ -87,15 +87,6 @@ export default class {
       for (let k = 0; k < positions.length; k++) {
         const position = positions[k];
         this.turnAt(position.i, position.j);
-        // const cell = this.getAt(position.i, position.j);
-        // if (cell.isOpen == false) {
-        //   const countNeighborBombs = countNeighborBombs(position.i, position.j);
-        //   if (countNeighborBombs == 0) {
-        //     this.turnAt(position.i, position.j);
-        //   } else {
-        //     cell.isOpen = true;
-        //   }
-        // }
       }
     }
   }
@@ -126,7 +117,7 @@ export default class {
       if (!f && cell.isOpen && cell.isBomb) {
         return true;
       }
-      return false;
+      return f;
     }, false);
     return f;
   }

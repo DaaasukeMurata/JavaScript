@@ -4,12 +4,12 @@ import * as Values from "./value.js";
 
 class MindSweeper {
   constructor() {
-    const canvas = document.querySelector("#canvas");
-    const message = document.querySelector("#message");
-    const resetButton = document.querySelector("#reset");
-    // const canvas = document.getElementById("canvas");
-    // const message = document.getElementById("message");
-    // const resetButton = document.getElementById("reset");
+    // const canvas = document.querySelector("#canvas");
+    // const message = document.querySelector("#message");
+    // const resetButton = document.querySelector("#reset");
+    const canvas = document.getElementById("canvas");
+    const message = document.getElementById("message");
+    const resetButton = document.getElementById("reset");
 
     this.panel = new Panel(canvas);
     this.table = null;

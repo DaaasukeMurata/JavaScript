@@ -23,7 +23,7 @@ export default class {
     this.actionListener = callback;
   }
 
-  // マウスクリック時のcallback登録
+  // マウスクリック時のcallback
   defineInputListeners() {
 
     // 左クリック
@@ -47,13 +47,13 @@ export default class {
   // マウスイベント取得開始
   startInputListeners() {
     this.isListening = true;
-    this.canvas.addEventListener("clicked", this.clicked, false);
+    this.canvas.addEventListener("click", this.clicked, false);
     this.canvas.addEventListener("contextmenu", this.contextmenu, false);
   }
 
   // マウスイベント取得停止
   stopInputListeners() {
-    this.canvas.removeEventListener("clicked", this.clicked, false);
+    this.canvas.removeEventListener("click", this.clicked, false);
     this.canvas.removeEventListener("contextmenu", this.contextmenu, false);
     this.isListening = false;
   }
@@ -124,7 +124,7 @@ export default class {
       if (cell.isBomb) {
         text = "\u2620";
       } else {
-        const n = cell.countNeighboarBombs(i, j);
+        const n = this.table.countNeighborBombs(i, j);
         if (n > 0) {
           text = n;
         }
@@ -149,7 +149,7 @@ export default class {
       ctx.font = `$(fontSize)px Times New Roman`;
       ctx.textAligh = "center";
       ctx.textBaseline = "middle";
-      ctx.fillText(text, left + (cellWdith / 2), top + (cellHeight / 2));
+      ctx.fillText(text, left + (cellWidth / 2), top + (cellHeight / 2));
     }
 
   }
