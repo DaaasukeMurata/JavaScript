@@ -1,0 +1,37 @@
+@startuml
+
+title shogi_ES2015
+
+class Player {
+
+}
+
+class Piece {
+  id : 駒の種類
+  name : 駒の名前
+  move()
+  movablePosition()
+}
+
+class Cell {
+  +piece
+}
+
+class Table {
+
+}
+
+class Panel {
+
+}
+
+class Shogi {
+
+}
+
+Cell "1..*" o-- "1" Table
+Table <-- Panel
+Shogi --> Panel
+Shogi --> Table
+
+@enduml

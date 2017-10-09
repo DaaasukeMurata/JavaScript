@@ -1,0 +1,56 @@
+@startuml
+
+title MindSweeper_ES2015
+
+class Cell {
+  +isBomb
+  +isOpen
+  +isFlagged
+}
+
+class Table {
+  +cols
+  +rows
+  -clear()
+  +getAt()
+  +setRandomBombs()
+  +countNeighborBombs()
+  +neighboarPositions()
+  +turnAt() 
+  +flagAt()
+  +isGameclear()
+  +isGameover()
+  -reduce()
+}
+
+class Panel {
+  canvas
+  context
+  width
+  height
+  table
+  actionListener
+  isListening
+  setCanvasSize()
+  setTable()
+  setActionListener()
+  -defineInputListeners()
+  startInputListeners()
+  stopInputListeners()
+  getPosition()
+  paint()
+  -paintCell()
+}
+
+class MindSweeper {
+  panel
+  table
+  +initGame()
+}
+
+Cell "1..*" o-right- "1" Table
+Table <-left- Panel : < 操作
+MindSweeper --> Panel
+MindSweeper --> Table
+
+@enduml
