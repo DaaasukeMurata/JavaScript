@@ -146,7 +146,7 @@ export default class {
     // text描画
     if (text != null) {
       ctx.fillStyle = "rgb(50,50,50)";
-      ctx.font = `$(fontSize)px Times New Roman`;
+      ctx.font = `${fontSize}px Times New Roman`;
       ctx.textAligh = "center";
       ctx.textBaseline = "middle";
       ctx.fillText(text, left + (cellWidth / 2), top + (cellHeight / 2));

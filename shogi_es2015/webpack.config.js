@@ -2,7 +2,7 @@ module.exports = {
   // build対象のディレクトリ
   context: __dirname + '/src',
   // 起点となるjsファイル。importしているファイルは自動で読み込まれる
-  entry: "./piece.js",
+  entry: "./shogi.js",
   output: {
     path: __dirname + '/www/js',
     // 出力ファイル名

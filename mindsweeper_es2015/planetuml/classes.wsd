@@ -11,6 +11,7 @@ class Cell {
 class Table {
   +cols
   +rows
+  array : Cellの配列
   -clear()
   +getAt()
   +setRandomBombs()

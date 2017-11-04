@@ -3,32 +3,42 @@
 title shogi_ES2015
 
 class Piece {
-  id : 駒の種類
-  name : 駒の名前
-  order : 先手 or 後手
-  move()
-  movablePosition()
+  +id : 駒の種類
+  +name : 駒の名前
+  +order : 先手後手
+  +movables : 移動範囲
+  +canPromote : 成れるか
+  +promote()
 }
 
 class Cell {
-  +piece
+  +piece : 駒
+  +hasPiece : 駒の有無
+  setPiece()
 }
 
 class Table {
-  +cell
+  cells : Cellの配列
 }
 
 class Panel {
-
+  canvas
+  drawCtx
+  width
+  height
+  table
+  +setTable()
+  +paint()
 }
 
 class Shogi {
-  +panel
-  +table
+  panel
+  table
 }
 
-Cell "1..*" o-- "1" Table
-Table <-- Panel
+Piece "0 or 1" o-r- "1" Cell
+Cell "1..*" o-r- "1" Table
+Table <-l- Panel
 Shogi --> Panel
 Shogi --> Table
 
