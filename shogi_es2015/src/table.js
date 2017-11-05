@@ -1,5 +1,5 @@
-import Cell from "./cell";
-import Piece from "./piece";
+import { Cell, CELL_STATE_IDLE, CELL_STATE_SELECTED, CELL_STATE_MOVABLE } from "./cell";
+import { Piece, PIECE_ORDER_GOTE, PIECE_ORDER_SENTE } from "./piece";
 
 export default class Table {
 
@@ -16,51 +16,51 @@ export default class Table {
 
   // 初期配置
   init() {
-    this.cells[0][0].setPiece(new Piece("KYO", 1));
-    this.cells[1][0].setPiece(new Piece("KEI", 1));
-    this.cells[2][0].setPiece(new Piece("GIN", 1));
-    this.cells[3][0].setPiece(new Piece("KIN", 1));
-    this.cells[4][0].setPiece(new Piece("OU", 1));
-    this.cells[5][0].setPiece(new Piece("KIN", 1));
-    this.cells[6][0].setPiece(new Piece("GIN", 1));
-    this.cells[7][0].setPiece(new Piece("KEI", 1));
-    this.cells[8][0].setPiece(new Piece("KYO", 1));
+    this.cells[0][0].setPiece(new Piece("KYO", PIECE_ORDER_GOTE));
+    this.cells[1][0].setPiece(new Piece("KEI", PIECE_ORDER_GOTE));
+    this.cells[2][0].setPiece(new Piece("GIN", PIECE_ORDER_GOTE));
+    this.cells[3][0].setPiece(new Piece("KIN", PIECE_ORDER_GOTE));
+    this.cells[4][0].setPiece(new Piece("OU", PIECE_ORDER_GOTE));
+    this.cells[5][0].setPiece(new Piece("KIN", PIECE_ORDER_GOTE));
+    this.cells[6][0].setPiece(new Piece("GIN", PIECE_ORDER_GOTE));
+    this.cells[7][0].setPiece(new Piece("KEI", PIECE_ORDER_GOTE));
+    this.cells[8][0].setPiece(new Piece("KYO", PIECE_ORDER_GOTE));
 
-    this.cells[1][1].setPiece(new Piece("HI", 1));
-    this.cells[7][1].setPiece(new Piece("KAKU", 1));
+    this.cells[1][1].setPiece(new Piece("HI", PIECE_ORDER_GOTE));
+    this.cells[7][1].setPiece(new Piece("KAKU", PIECE_ORDER_GOTE));
 
-    this.cells[0][2].setPiece(new Piece("FU", 1));
-    this.cells[1][2].setPiece(new Piece("FU", 1));
-    this.cells[2][2].setPiece(new Piece("FU", 1));
-    this.cells[3][2].setPiece(new Piece("FU", 1));
-    this.cells[4][2].setPiece(new Piece("FU", 1));
-    this.cells[5][2].setPiece(new Piece("FU", 1));
-    this.cells[6][2].setPiece(new Piece("FU", 1));
-    this.cells[7][2].setPiece(new Piece("FU", 1));
-    this.cells[8][2].setPiece(new Piece("FU", 1));
-    
-    this.cells[0][6].setPiece(new Piece("FU", 0));
-    this.cells[1][6].setPiece(new Piece("FU", 0));
-    this.cells[2][6].setPiece(new Piece("FU", 0));
-    this.cells[3][6].setPiece(new Piece("FU", 0));
-    this.cells[4][6].setPiece(new Piece("FU", 0));
-    this.cells[5][6].setPiece(new Piece("FU", 0));
-    this.cells[6][6].setPiece(new Piece("FU", 0));
-    this.cells[7][6].setPiece(new Piece("FU", 0));
-    this.cells[8][6].setPiece(new Piece("FU", 0));
+    this.cells[0][2].setPiece(new Piece("FU", PIECE_ORDER_GOTE));
+    this.cells[1][2].setPiece(new Piece("FU", PIECE_ORDER_GOTE));
+    this.cells[2][2].setPiece(new Piece("FU", PIECE_ORDER_GOTE));
+    this.cells[3][2].setPiece(new Piece("FU", PIECE_ORDER_GOTE));
+    this.cells[4][2].setPiece(new Piece("FU", PIECE_ORDER_GOTE));
+    this.cells[5][2].setPiece(new Piece("FU", PIECE_ORDER_GOTE));
+    this.cells[6][2].setPiece(new Piece("FU", PIECE_ORDER_GOTE));
+    this.cells[7][2].setPiece(new Piece("FU", PIECE_ORDER_GOTE));
+    this.cells[8][2].setPiece(new Piece("FU", PIECE_ORDER_GOTE));
 
-    this.cells[1][7].setPiece(new Piece("KAKU", 0));
-    this.cells[7][7].setPiece(new Piece("HI", 0));
+    this.cells[0][6].setPiece(new Piece("FU", PIECE_ORDER_SENTE));
+    this.cells[1][6].setPiece(new Piece("FU", PIECE_ORDER_SENTE));
+    this.cells[2][6].setPiece(new Piece("FU", PIECE_ORDER_SENTE));
+    this.cells[3][6].setPiece(new Piece("FU", PIECE_ORDER_SENTE));
+    this.cells[4][6].setPiece(new Piece("FU", PIECE_ORDER_SENTE));
+    this.cells[5][6].setPiece(new Piece("FU", PIECE_ORDER_SENTE));
+    this.cells[6][6].setPiece(new Piece("FU", PIECE_ORDER_SENTE));
+    this.cells[7][6].setPiece(new Piece("FU", PIECE_ORDER_SENTE));
+    this.cells[8][6].setPiece(new Piece("FU", PIECE_ORDER_SENTE));
 
-    this.cells[0][8].setPiece(new Piece("KYO", 0));
-    this.cells[1][8].setPiece(new Piece("KEI", 0));
-    this.cells[2][8].setPiece(new Piece("GIN", 0));
-    this.cells[3][8].setPiece(new Piece("KIN", 0));
-    this.cells[4][8].setPiece(new Piece("OU", 0));
-    this.cells[5][8].setPiece(new Piece("KIN", 0));
-    this.cells[6][8].setPiece(new Piece("GIN", 0));
-    this.cells[7][8].setPiece(new Piece("KEI", 0));
-    this.cells[8][8].setPiece(new Piece("KYO", 0));
+    this.cells[1][7].setPiece(new Piece("KAKU", PIECE_ORDER_SENTE));
+    this.cells[7][7].setPiece(new Piece("HI", PIECE_ORDER_SENTE));
+
+    this.cells[0][8].setPiece(new Piece("KYO", PIECE_ORDER_SENTE));
+    this.cells[1][8].setPiece(new Piece("KEI", PIECE_ORDER_SENTE));
+    this.cells[2][8].setPiece(new Piece("GIN", PIECE_ORDER_SENTE));
+    this.cells[3][8].setPiece(new Piece("KIN", PIECE_ORDER_SENTE));
+    this.cells[4][8].setPiece(new Piece("OU", PIECE_ORDER_SENTE));
+    this.cells[5][8].setPiece(new Piece("KIN", PIECE_ORDER_SENTE));
+    this.cells[6][8].setPiece(new Piece("GIN", PIECE_ORDER_SENTE));
+    this.cells[7][8].setPiece(new Piece("KEI", PIECE_ORDER_SENTE));
+    this.cells[8][8].setPiece(new Piece("KYO", PIECE_ORDER_SENTE));
   }
 
   static get COLS() {

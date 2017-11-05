@@ -1,4 +1,4 @@
-export const idTable = {
+const idTable = {
   OU: Symbol(),
   HI: Symbol(),
   KAKU: Symbol(),
@@ -15,7 +15,7 @@ export const idTable = {
   NARI_FU: Symbol()
 };
 
-export const nameTable = {
+const nameTable = {
   OU: "王",
   HI: "飛",
   KAKU: "角",
@@ -33,7 +33,7 @@ export const nameTable = {
 };
 
 // [x, y, continuous]
-export const movablesTable = {
+const movablesTable = {
   OU: [[0, -1, 0], [1, -1, 0], [1, 0, 0], [1, 1, 0], [0, 1, 0], [-1, 1, 0], [-1, 0, 0], [-1, -1, 0]],
   HI: [[0, -1, 1], [1, 0, 1], [0, 1, 1], [-1, 0, 1]],
   KAKU: [[1, -1, 1], [1, 1, 1], [-1, 1, 1], [-1, -1, 1]],
@@ -51,7 +51,7 @@ export const movablesTable = {
 };
 
 // 成れるか
-export const promoteTable = {
+const promoteTable = {
   OU: 0,
   HI: 1,
   KAKU: 1,
@@ -68,8 +68,10 @@ export const promoteTable = {
   NARI_FU: 0
 };
 
+export const PIECE_ORDER_SENTE = 0;
+export const PIECE_ORDER_GOTE = 1;
 
-export default class Piece {
+export class Piece {
 
   constructor(id, order) {
     this.id = idTable[id];
@@ -110,6 +112,37 @@ export default class Piece {
     this.name = nameTable[promoted_id];
     this.movables = movablesTable[promoted_id];
     this.canPromote = promoteTable[promoted_id];
+  }
+
+  // 成ったのを戻す
+  backPromote() {
+    let promoted_id;
+
+    switch (this.id) {
+      case idTable["RYU"]:
+        promoted_id = "HI";
+        break;
+      case idTable["UMA"]:
+        promoted_id = "KAKU";
+        break;
+      case idTable["NARI_GIN"]:
+        promoted_id = "GIN";
+        break;
+      case idTable["NARI_KEI"]:
+        promoted_id = "KEI";
+        break;
+      case idTable["NARI_KYO"]:
+        promoted_id = "KYO";
+        break;
+      case idTable["NARI_FU"]:
+        promoted_id = "FU";
+        break;
+    }
+    this.id = idTable[promoted_id];
+    this.name = nameTable[promoted_id];
+    this.movables = movablesTable[promoted_id];
+    this.canPromote = promoteTable[promoted_id];
+
   }
 }
 

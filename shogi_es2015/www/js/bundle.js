@@ -80,7 +80,7 @@ class Table {
     for (let x = 0; x < Table.COLS; x++) {
       this.cells[x] = [];
       for (let y = 0; y < Table.ROWS; y++) {
-        this.cells[x][y] = new __WEBPACK_IMPORTED_MODULE_0__cell__["a" /* default */](null);
+        this.cells[x][y] = new __WEBPACK_IMPORTED_MODULE_0__cell__["a" /* Cell */](null);
       }
     }
     this.init();
@@ -88,51 +88,51 @@ class Table {
 
   // 初期配置
   init() {
-    this.cells[0][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("KYO", 1));
-    this.cells[1][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("KEI", 1));
-    this.cells[2][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("GIN", 1));
-    this.cells[3][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("KIN", 1));
-    this.cells[4][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("OU", 1));
-    this.cells[5][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("KIN", 1));
-    this.cells[6][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("GIN", 1));
-    this.cells[7][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("KEI", 1));
-    this.cells[8][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("KYO", 1));
+    this.cells[0][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("KYO", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
+    this.cells[1][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("KEI", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
+    this.cells[2][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("GIN", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
+    this.cells[3][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("KIN", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
+    this.cells[4][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("OU", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
+    this.cells[5][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("KIN", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
+    this.cells[6][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("GIN", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
+    this.cells[7][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("KEI", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
+    this.cells[8][0].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("KYO", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
 
-    this.cells[1][1].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("HI", 1));
-    this.cells[7][1].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("KAKU", 1));
+    this.cells[1][1].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("HI", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
+    this.cells[7][1].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("KAKU", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
 
-    this.cells[0][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 1));
-    this.cells[1][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 1));
-    this.cells[2][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 1));
-    this.cells[3][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 1));
-    this.cells[4][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 1));
-    this.cells[5][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 1));
-    this.cells[6][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 1));
-    this.cells[7][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 1));
-    this.cells[8][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 1));
-    
-    this.cells[0][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 0));
-    this.cells[1][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 0));
-    this.cells[2][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 0));
-    this.cells[3][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 0));
-    this.cells[4][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 0));
-    this.cells[5][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 0));
-    this.cells[6][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 0));
-    this.cells[7][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 0));
-    this.cells[8][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("FU", 0));
+    this.cells[0][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
+    this.cells[1][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
+    this.cells[2][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
+    this.cells[3][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
+    this.cells[4][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
+    this.cells[5][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
+    this.cells[6][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
+    this.cells[7][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
+    this.cells[8][2].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* PIECE_ORDER_GOTE */]));
 
-    this.cells[1][7].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("KAKU", 0));
-    this.cells[7][7].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("HI", 0));
+    this.cells[0][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+    this.cells[1][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+    this.cells[2][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+    this.cells[3][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+    this.cells[4][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+    this.cells[5][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+    this.cells[6][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+    this.cells[7][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+    this.cells[8][6].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("FU", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
 
-    this.cells[0][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("KYO", 0));
-    this.cells[1][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("KEI", 0));
-    this.cells[2][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("GIN", 0));
-    this.cells[3][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("KIN", 0));
-    this.cells[4][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("OU", 0));
-    this.cells[5][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("KIN", 0));
-    this.cells[6][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("GIN", 0));
-    this.cells[7][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("KEI", 0));
-    this.cells[8][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["a" /* default */]("KYO", 0));
+    this.cells[1][7].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("KAKU", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+    this.cells[7][7].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("HI", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+
+    this.cells[0][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("KYO", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+    this.cells[1][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("KEI", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+    this.cells[2][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("GIN", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+    this.cells[3][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("KIN", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+    this.cells[4][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("OU", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+    this.cells[5][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("KIN", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+    this.cells[6][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("GIN", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+    this.cells[7][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("KEI", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
+    this.cells[8][8].setPiece(new __WEBPACK_IMPORTED_MODULE_1__piece__["c" /* Piece */]("KYO", __WEBPACK_IMPORTED_MODULE_1__piece__["b" /* PIECE_ORDER_SENTE */]));
   }
 
   static get COLS() {
@@ -158,8 +158,8 @@ class Table {
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__table__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__panel__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__values__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__panel__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__values__ = __webpack_require__(5);
 
 
 
@@ -186,21 +186,40 @@ shogi.startGame();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+const CELL_STATE_IDLE = 0;
+/* unused harmony export CELL_STATE_IDLE */
+
+const CELL_STATE_SELECTED = 1;
+/* unused harmony export CELL_STATE_SELECTED */
+
+const CELL_STATE_MOVABLE = 2;
+/* unused harmony export CELL_STATE_MOVABLE */
+
+
 class Cell {
-  constructor(piece){
-    this.setPiece(piece);
+  constructor() {
+    this.piece = null;
+    this.state = CELL_STATE_IDLE;
   }
 
   // 駒を配置。取り除くときはnullで指定
-  setPiece(piece){
+  setPiece(piece) {
     this.piece = piece;
   }
 
-  get hasPiece(){
-    if(this.piece == null){
+  get hasPiece() {
+    if (this.piece == null) {
       return 0;
     } else {
       return 1;
+    }
+  }
+
+  select() {
+    if (this.state == CELL_STATE_SELECTED) {
+      this.state = CELL_STATE_IDLE;
+    } else {
+      this.state = CELL_STATE_SELECTED;
     }
   }
 
@@ -230,8 +249,6 @@ const idTable = {
   NARI_KYO: Symbol(),
   NARI_FU: Symbol()
 };
-/* unused harmony export idTable */
-
 
 const nameTable = {
   OU: "王",
@@ -249,8 +266,6 @@ const nameTable = {
   NARI_KYO: "杏",
   NARI_FU: "と"
 };
-/* unused harmony export nameTable */
-
 
 // [x, y, continuous]
 const movablesTable = {
@@ -269,8 +284,6 @@ const movablesTable = {
   NARI_KYO: [[0, -1, 0], [1, -1, 0], [1, 0, 0], [0, 1, 0], [-1, 0, 0], [-1, -1, 0]],
   NARI_FU: [[0, -1, 0], [1, -1, 0], [1, 0, 0], [0, 1, 0], [-1, 0, 0], [-1, -1, 0]]
 };
-/* unused harmony export movablesTable */
-
 
 // 成れるか
 const promoteTable = {
@@ -289,8 +302,12 @@ const promoteTable = {
   NARI_KYO: 0,
   NARI_FU: 0
 };
-/* unused harmony export promoteTable */
 
+const PIECE_ORDER_SENTE = 0;
+/* harmony export (immutable) */ __webpack_exports__["b"] = PIECE_ORDER_SENTE;
+
+const PIECE_ORDER_GOTE = 1;
+/* harmony export (immutable) */ __webpack_exports__["a"] = PIECE_ORDER_GOTE;
 
 
 class Piece {
@@ -335,15 +352,45 @@ class Piece {
     this.movables = movablesTable[promoted_id];
     this.canPromote = promoteTable[promoted_id];
   }
+
+  // 成ったのを戻す
+  backPromote() {
+    let promoted_id;
+
+    switch (this.id) {
+      case idTable["RYU"]:
+        promoted_id = "HI";
+        break;
+      case idTable["UMA"]:
+        promoted_id = "KAKU";
+        break;
+      case idTable["NARI_GIN"]:
+        promoted_id = "GIN";
+        break;
+      case idTable["NARI_KEI"]:
+        promoted_id = "KEI";
+        break;
+      case idTable["NARI_KYO"]:
+        promoted_id = "KYO";
+        break;
+      case idTable["NARI_FU"]:
+        promoted_id = "FU";
+        break;
+    }
+    this.id = idTable[promoted_id];
+    this.name = nameTable[promoted_id];
+    this.movables = movablesTable[promoted_id];
+    this.canPromote = promoteTable[promoted_id];
+
+  }
 }
-/* harmony export (immutable) */ __webpack_exports__["a"] = Piece;
+/* harmony export (immutable) */ __webpack_exports__["c"] = Piece;
 
 
 
 
 /***/ }),
-/* 4 */,
-/* 5 */
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -412,12 +459,31 @@ class Panel {
     }
   }
 
+  // 座標から、tableのマス取得
+  getTablePosition(xpx, ypx) {
+    if (this.table == null) {
+      return [null, null];
+    }
+
+    const cellWidth = this.width / __WEBPACK_IMPORTED_MODULE_0__table__["a" /* default */].COLS;
+    const cellHeight = this.height / __WEBPACK_IMPORTED_MODULE_0__table__["a" /* default */].ROWS;
+    let x = Math.floor(xpx / cellWidth);
+    let y = Math.floor(ypx / cellHeight);
+    if (x >= __WEBPACK_IMPORTED_MODULE_0__table__["a" /* default */].COLS) {
+      x = null;
+    }
+    if (y >= __WEBPACK_IMPORTED_MODULE_0__table__["a" /* default */].ROWS) {
+      y = null;
+    }
+    return [x, y];
+  }
+
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = Panel;
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

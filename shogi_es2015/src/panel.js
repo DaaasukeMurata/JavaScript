@@ -62,4 +62,23 @@ export default class Panel {
     }
   }
 
+  // 座標から、tableのマス取得
+  getTablePosition(xpx, ypx) {
+    if (this.table == null) {
+      return [null, null];
+    }
+
+    const cellWidth = this.width / Table.COLS;
+    const cellHeight = this.height / Table.ROWS;
+    let x = Math.floor(xpx / cellWidth);
+    let y = Math.floor(ypx / cellHeight);
+    if (x >= Table.COLS) {
+      x = null;
+    }
+    if (y >= Table.ROWS) {
+      y = null;
+    }
+    return [x, y];
+  }
+
 }
